@@ -11,12 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120151935) do
+ActiveRecord::Schema.define(:version => 20130422074127) do
 
-  create_table "table", :force => true do |t|
-    t.string   "column",     :null => false
+  create_table "badge_sets", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  create_table "badges", :force => true do |t|
+    t.string   "name",         :null => false
+    t.string   "surname"
+    t.string   "company"
+    t.string   "profession"
+    t.integer  "badge_set_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "badges", ["badge_set_id"], :name => "index_badges_on_badge_set_id"
+
+  add_foreign_key "badges", "badge_sets", :name => "badges_badge_set_id_fk", :dependent => :delete
 end

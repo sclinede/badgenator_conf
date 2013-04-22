@@ -2,7 +2,9 @@ language: ruby
 rvm:
   - 1.9.3
 env:
-  - DB=sqlite
-script: 
+  - DB=postgres
+script:
   - RAILS_ENV=test bundle exec rake db:migrate
   - bundle exec rake
+before_script:
+  - cp config/database.yml.sample config/database.yml
