@@ -1,4 +1,6 @@
 class BadgeSet < ActiveRecord::Base
+  has_many :badges, :dependent => :destroy
+
   attr_accessible :name
 
   attr_accessible :source
