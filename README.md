@@ -1,6 +1,8 @@
 Badgenator
 ==========
 
+[![Build Status](https://travis-ci.org//artofhuman/badgenator_conf.png)](https://travis-ci.org/artofhuman/badgenator_conf)
+
 Простой и удобный генератор бейджей
 
 ## Легенда
