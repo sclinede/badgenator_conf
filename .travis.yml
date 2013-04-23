@@ -8,3 +8,4 @@ script:
   - bundle exec rake
 before_script:
   - cp config/database.yml.sample config/database.yml
+  - psql -c 'create database badgenator_test;' -U postgres
