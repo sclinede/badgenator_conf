@@ -3,13 +3,13 @@ Badgenator::Application.routes.draw do
 
   resources :badge_sets, :path => :archive, :except => [:show] do
     collection do
-       match 'page/:page', :action => :index
+      match 'page/:page', :action => :index
     end
 
     resources :badges do
       collection do
-          match 'page/:page', :action => :index
-        end
+        match 'page/:page', :action => :index
+      end
     end
   end
 
