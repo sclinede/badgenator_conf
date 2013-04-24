@@ -9,5 +9,5 @@ class BadgeSet < ActiveRecord::Base
   attr_accessible :image
   attr_accessor :image
   
-  validates :name, presence: true
+  validates :name, :presence => true, :length => { :in => 2..50 } 
 end

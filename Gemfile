@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'foreigner'
 
+gem 'validates_existence'
+
 gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
